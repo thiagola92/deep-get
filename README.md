@@ -57,7 +57,7 @@ Or you could use multiple gets.
 big_images = product.get("images", {}).get("active", {}).get("big", [])
 ```
 
-Either way can be quite tired to use and complicated if the structure gets bigger and bigger (like a json from a complicated website). Using `dget` simplify this type of navigation.  
+Either way can be quite tiring to use and complicated if the structure gets bigger and bigger (like a json from a complicated website). Using `dget` simplify this type of navigation.  
 ```python
 big_images = dget(product, "images", "active", "big", default=[])
 ```
