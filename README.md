@@ -5,7 +5,9 @@ Function to get value that is deep inside another structure.
 `pip install deep-get`  
 
 # syntax
-`dget(structure, *args, default=None)`  
+```python
+dget(structure, *args, default=None)
+```  
 `structure` - Structure to go through  
 `*args` - Each field to be passed as key  
 `default` - The value to return in case it fail to access any of the keys  
