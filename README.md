@@ -13,7 +13,7 @@ dget(structure, *args, default=None)
 `default` - The value to return in case it fail to access any of the keys  
 
 # example
-Let's say that you have dictionary with product information and you want all big images.  
+Let's say that you have dictionary with product information and you want all active big images.  
 ```python
 product = {
     "name": "really cool product",
