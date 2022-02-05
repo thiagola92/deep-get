@@ -1,8 +1,8 @@
-# deep-get
+# la-deep-get
 Function to get value that is deep inside another structure.  
 
 # install
-`pip install deep-get`  
+`pip install la-deep-get`  
 
 # syntax
 ```python
