@@ -9,7 +9,7 @@ setup(
     description="Function to get value from unknown structure",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/thiagola92/deep-get",
+    url="https://github.com/thiagola92/la-deep-get",
     author="thiagola92",
     author_email="thiagola92@gmail.com",
     classifiers=[
