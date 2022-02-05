@@ -10,7 +10,7 @@ dget(structure, *args, default=None)
 ```  
 `structure` - Structure to go through  
 `*args` - Each field to be passed as key  
-`default` - The value to return in case it fail to access any of the keys  
+`default` - The value to return in case it fail to access any of the keys (default is `None`)  
 
 # example
 Let's say that you have dictionary with product information and you want all active big images.  
@@ -59,7 +59,7 @@ Or you could use multiple gets.
 big_images = product.get("images", {}).get("active", {}).get("big", [])
 ```
 
-Either way can be quite tiring to use and complicated if the structure gets bigger and bigger (like a json from a complicated website). Using `dget` simplify this type of navigation.  
+Either way can be quite annoying to write and complicated. If the structure gets bigger and bigger (like a json from a complicated website), using `dget` may simplify this situation.  
 ```python
 big_images = dget(product, "images", "active", "big", default=[])
 ```
