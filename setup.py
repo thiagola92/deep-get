@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 long_description = Path("README.md").read_text()
 
 setup(
-    name="deep-get",
+    name="la-deep-get",
     version="0.0.1",
     description="Function to get value from unknown structure",
     long_description=long_description,

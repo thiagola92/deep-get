@@ -1,6 +1,6 @@
 black==22.1.0
 click==8.0.3
--e git+https://github.com/thiagola92/deep-get.git@b086d2623dc96fa74cebbced548e200be9e7ff0d#egg=deep_get
+-e git+https://github.com/thiagola92/deep-get.git@b086d2623dc96fa74cebbced548e200be9e7ff0d#egg=la_deep_get
 mypy-extensions==0.4.3
 pathspec==0.9.0
 platformdirs==2.4.1

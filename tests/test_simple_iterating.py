@@ -1,7 +1,7 @@
 import unittest
 from unittest import TestCase
 
-from deep_get import dget
+from la_deep_get import dget
 
 
 class TestSimpleIterating(TestCase):
