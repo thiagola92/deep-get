@@ -5,7 +5,7 @@ long_description = Path("README.md").read_text()
 
 setup(
     name="la-deep-get",
-    version="0.0.1",
+    version="0.0.2",
     description="Function to get value from unknown structure",
     long_description=long_description,
     long_description_content_type="text/markdown",
