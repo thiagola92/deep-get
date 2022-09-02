@@ -46,7 +46,12 @@ product = {
 }
 ```
 
-The easiest way would be to use `try except` and set a default value in case of errors.  
+It's a simple one line function to get a value.  
+```python
+big_images = dget(product, "images", "active", "big", default=[])
+```
+
+Without the package you would have to do things like `try except`:  
 ```python
 try:
     big_images = product["images"]["active"]["big"]
@@ -54,14 +59,9 @@ except:
     big_images = []
 ```
 
-Or you could use multiple gets.  
+Or chain `get()` methods like:  
 ```python
 big_images = product.get("images", {}).get("active", {}).get("big", [])
-```
-
-Either way can be quite annoying to write and complicated. If the structure gets bigger and bigger (like a json from a complicated website), using `dget` may simplify this situation.  
-```python
-big_images = dget(product, "images", "active", "big", default=[])
 ```
 
 # usage
