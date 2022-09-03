@@ -7,14 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10"]
     steps:
-      - uses: actions/checkout@v3
-      - uses: pdm-project/setup-pdm@main
-        with:
-          python-version: ${{ matrix.python-version }}
-          enable-pep582: true
-      - run: pdm install
+      - uses: thiagola92/la-deep-get/.github/workflows/python-package.yml@main
       - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
