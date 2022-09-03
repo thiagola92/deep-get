@@ -5,8 +5,9 @@ on:
     types: [published]
 
 jobs:
+  build:
+    uses: thiagola92/la-deep-get/.github/workflows/python-package.yml@main
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: thiagola92/la-deep-get/.github/workflows/python-package.yml@main
       - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
