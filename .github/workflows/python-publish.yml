@@ -5,9 +5,13 @@ on:
     types: [published]
 
 jobs:
-  build:
-    uses: thiagola92/la-deep-get/.github/workflows/python-package.yml@main
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: pdm-project/setup-pdm@main
+        with:
+          python-version: ${{ matrix.python-version }}
+          enable-pep582: true
+      - run: pdm install
       - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
