@@ -17,6 +17,7 @@ jobs:
     - uses: pdm-project/setup-pdm@main
       with:
         python-version: ${{ matrix.python-version }}
+    - run: pdm install
     - run: pdm run sort
     - run: pdm run tests
     - run: |
