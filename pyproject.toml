@@ -25,6 +25,10 @@ repository = "https://github.com/thiagola92/la-deep-get"
 
 [tool.pdm]
 
+[tool.pdm.scripts]
+tests = "python -m unittest discover -v -f -s tests"
+sort = "python -m isort -v --ac ."
+
 [tool.pdm.dev-dependencies]
 lint = [
     "black",
