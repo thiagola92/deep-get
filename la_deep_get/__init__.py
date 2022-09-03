@@ -1,7 +1,9 @@
-from typing import Any
+from typing import Any, TypeVar
+
+T = TypeVar("T")
 
 
-def dget(structure: Any, *args, default: Any = None):
+def dget(structure: Any, *args, default: T = None) -> Any | T | None:
     for key in args:
         try:
             structure = structure[key]
