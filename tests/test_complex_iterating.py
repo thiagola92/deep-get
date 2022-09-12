@@ -22,8 +22,8 @@ class TestComplexIterating(TestCase):
                     "um": "start",
                     "dois": "middle",
                     "três": "end",
-                }
-            }
+                },
+            },
         }
 
         assert isinstance(dget(dict_, "first"), list)
@@ -46,9 +46,17 @@ class TestComplexIterating(TestCase):
         assert dget(dict_, "second", "primeiro", 2) == dict_["second"]["primeiro"][2]
 
         assert isinstance(dget(dict_, "second", "segundo"), dict)
-        assert dget(dict_, "second", "segundo", "um") == dict_["second"]["segundo"]["um"]
-        assert dget(dict_, "second", "segundo", "dois") == dict_["second"]["segundo"]["dois"]
-        assert dget(dict_, "second", "segundo", "três") == dict_["second"]["segundo"]["três"]
+        assert (
+            dget(dict_, "second", "segundo", "um") == dict_["second"]["segundo"]["um"]
+        )
+        assert (
+            dget(dict_, "second", "segundo", "dois")
+            == dict_["second"]["segundo"]["dois"]
+        )
+        assert (
+            dget(dict_, "second", "segundo", "três")
+            == dict_["second"]["segundo"]["três"]
+        )
 
         # Test not finding
 
@@ -57,7 +65,7 @@ class TestComplexIterating(TestCase):
         assert dget(dict_, "second", "terceiro") == None
         assert dget(dict_, "second", "primeiro", 3) == None
         assert dget(dict_, "second", "segundo", "quatro") == None
-    
+
     def test_list(self):
         list_ = [
             [
@@ -76,7 +84,7 @@ class TestComplexIterating(TestCase):
                     "dois": "middle",
                     "três": "end",
                 },
-            }
+            },
         ]
 
         assert isinstance(dget(list_, 0), list)
@@ -104,6 +112,7 @@ class TestComplexIterating(TestCase):
         assert dget(list_, 1, "terceiro") == None
         assert dget(list_, 1, "primeiro", 3) == None
         assert dget(list_, 1, "segundo", "quatro") == None
+
 
 if __name__ == "__main__":
     unittest.main()
